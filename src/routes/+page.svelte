@@ -1,6 +1,7 @@
 <script>
     // @ts-ignore
-    import { round } from 'lodash';
+    import pkg from 'lodash';
+    const { round } = pkg;
     
     let price = NaN;
     let discount = NaN;
