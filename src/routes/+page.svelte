@@ -92,6 +92,7 @@
                 <option value="Canada">Canada</option>
                 <option value="Egypt">Egypt</option>
                 <option value="Russia">Russia</option>
+                <option value="Germany">Germany</option>
                 <option value="Japan">Japan</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Ukraine">Ukraine</option>
