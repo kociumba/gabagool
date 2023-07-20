@@ -110,12 +110,12 @@
     </div>
     <div class="secondary_containers">
         <h1>{round(full_price, 2)}</h1>
-        <h2>{is_it_scam}</h2>
+        <h2 class="is_it_scam">{is_it_scam}</h2>
     </div>
 </div>
 
 <svelte:head>
-    <title>pricer v0.0.1</title>
+    <title>the pricer v0.0.2</title>
 </svelte:head>
 
 <style>
@@ -181,6 +181,11 @@
         padding: 0px;
         border: 5px;
         border-radius: 1px;
+    }
+
+    .is_it_scam {
+        color: #cc00ff;
+        filter: grayscale(1) brightness(50%);
     }
 </style>
 
