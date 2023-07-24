@@ -25,7 +25,7 @@
         is_it_scam = "";
         end_price = 0;
 
-        calculate_button_press();
+    //    calculate_button_press();
     });
     
     export function calculate_button_press() {
@@ -81,6 +81,8 @@
         } else {
             is_it_scam = "";
         }
+
+        end_price = Math.round(full_price*100)/100;
 
     }
 </script>
