@@ -91,11 +91,11 @@
 <div class="container">
     <div class="secondary_containers">
         <h1>price</h1>
-        <input type="number" placeholder="price of the item" bind:value={price}>
+        <input type="number" class="number_input" placeholder="price of the item" bind:value={price}>
     </div>
     <div class="secondary_containers">
         <h1>discount</h1>
-        <input type="number" placeholder="discount on the thing" max="100" bind:value={discount}>
+        <input type="number" class="number_input" placeholder="discount on the thing" max="100" bind:value={discount}>
     </div>
     <div class="secondary_containers">
         <h1>country</h1>
@@ -132,7 +132,7 @@
     <title>the pricer v0.0.2</title>
 </svelte:head>
 
-<style>
+<style lang="scss">
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
     
     :global()::selection {
@@ -180,13 +180,18 @@
         /*width: 100%;*/
         margin: 20px;
     }
-    
+
+    .number_input {
+        width: 300px;
+    }
     select {
         width: 300px;
         height: 20px;
         padding: 0px;
         border: 5px;
         border-radius: 1px;
+        background-color: #020104;
+        color: #fafafa;
     }
     
     input {
@@ -195,6 +200,8 @@
         padding: 0px;
         border: 5px;
         border-radius: 1px;
+        background-color: #020104;
+        color: #fafafa;
     }
 
     .is_it_scam {
