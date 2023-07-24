@@ -1,7 +1,4 @@
 <script>
-    // @ts-ignore
-    import pkg from 'lodash';
-    const { round } = pkg;
     
     let price = NaN;
     let discount = NaN;
@@ -109,7 +106,7 @@
         </button>
     </div>
     <div class="secondary_containers">
-        <h1>{round(full_price, 2)}</h1>
+        <h1>{Math.round(full_price*100)/100}</h1>
         <h2 class="is_it_scam">{is_it_scam}</h2>
     </div>
 </div>
