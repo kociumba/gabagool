@@ -1,5 +1,6 @@
 <script>
-    
+      import { onMount } from 'svelte';
+
     let price = NaN;
     let discount = NaN;
     let full_price = 0;
@@ -8,11 +9,24 @@
     let tax = 0;
     let country = "";
     let is_it_scam = "";
+    let end_price = 0;
     
     $: {
         console.log(country);
         calculate_button_press();
     }
+
+    onMount(async () => {
+        full_price = 0;
+        discount_amount = 0;
+        full_price_no_tax = 0;
+        tax = 0;
+        country = "";
+        is_it_scam = "";
+        end_price = 0;
+
+        calculate_button_press();
+    });
     
     export function calculate_button_press() {
         switch (country) {
@@ -67,6 +81,7 @@
         } else {
             is_it_scam = "";
         }
+
     }
 </script>
 
@@ -106,7 +121,7 @@
         </button>
     </div>
     <div class="secondary_containers">
-        <h1>{Math.round(full_price*100)/100}</h1>
+        <h1>{end_price}</h1>
         <h2 class="is_it_scam">{is_it_scam}</h2>
     </div>
 </div>
