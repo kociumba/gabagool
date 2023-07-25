@@ -1,6 +1,5 @@
 <script>
       import { onMount } from 'svelte';
-      import autoAnimate from "@formkit/auto-animate"
 
     let price = NaN;
     let discount = NaN;
@@ -13,6 +12,7 @@
     let end_price = 0;
     
     $: {
+        console.info('assuming the vat tax for ' + country);
         calculate_button_press();
     }
 
@@ -85,7 +85,7 @@
 </script>
 
 
-<div class="container" use:autoAnimate>
+<div class="container">
     <div class="secondary_containers">
         <h1>price</h1>
         <input type="number" class="number_input" placeholder="price of the item" bind:value={price}>
