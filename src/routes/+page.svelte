@@ -42,6 +42,9 @@
             case "Egypt":
             tax = 0.14;
             break;
+            case "Sweden"
+            tax = o.25
+            break;
             case "Russia":
             tax = 0.20;
             break;
@@ -103,6 +106,7 @@
                 <option value="Australia">Australia</option>
                 <option value="Canada">Canada</option>
                 <option value="Egypt">Egypt</option>
+                <option value="Sweden">Sweden</>option>
                 <option value="Russia">Russia</option>
                 <option value="Germany">Germany</option>
                 <option value="Japan">Japan</option>
