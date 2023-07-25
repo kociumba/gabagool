@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@formkit/auto-animate": "^0.7.0",
 		"@sveltejs/adapter-vercel": "^3.0.2",
 		"lodash": "^4.17.21"
 	}

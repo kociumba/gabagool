@@ -1,5 +1,6 @@
 <script>
       import { onMount } from 'svelte';
+      import autoAnimate from "@formkit/auto-animate"
 
     let price = NaN;
     let discount = NaN;
@@ -12,7 +13,6 @@
     let end_price = 0;
     
     $: {
-        console.log(country);
         calculate_button_press();
     }
 
@@ -69,12 +69,9 @@
         }
         
         let parsedDiscount = discount / 100;
-        console.log(parsedDiscount);
         discount_amount = parsedDiscount * price;
         full_price_no_tax = price - discount_amount;
-        console.log(full_price_no_tax);
         full_price = full_price_no_tax + full_price_no_tax * tax;
-        console.log(full_price);
 
         if (full_price > price) {
             is_it_scam = "the government is scamming you";
@@ -88,7 +85,7 @@
 </script>
 
 
-<div class="container">
+<div class="container" use:autoAnimate>
     <div class="secondary_containers">
         <h1>price</h1>
         <input type="number" class="number_input" placeholder="price of the item" bind:value={price}>
@@ -182,28 +179,28 @@
     }
 
     .number_input {
-        width: 300px;
+        border-radius: 10px;
     }
     select {
         width: 300px;
-        height: 20px;
+        font-size: 14px;
+        height: 30px;
         padding: 0px;
-        border: 5px;
-        border-radius: 1px;
+        border: 5px solid #fafafa;
+        border-radius: 10px;
         background-color: #020104;
         color: #fafafa;
     }
-    
     input {
         width: 300px;
+        font-size: 14px;
         height: 20px;
         padding: 0px;
-        border: 5px;
-        border-radius: 1px;
+        border: 5px solid #fafafa;
+        border-radius: 10px;
         background-color: #020104;
         color: #fafafa;
     }
-
     .is_it_scam {
         color: #cc00ff;
         filter: grayscale(1) brightness(50%);
